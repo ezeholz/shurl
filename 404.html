@@ -10,9 +10,9 @@
         if(handler.split('shurl')[1].slice(1)!="") {
             fetch(goog+'?use=searchshort&id='+handler.split('shurl')[1].slice(1)).then((res) => res.json()).then(function(res){
                 if(res.url) location.href = res.url;
-                else location.href = 'https://ezeholz.github.io/shurl'
+                else location.href = 'https://'+repo
             })
-        } else location.href = 'https://ezeholz.github.io/shurl'
+        } else location.href = 'https://'+repo
     </script>
     </head>
     <body>
