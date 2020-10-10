@@ -1,4 +1,5 @@
-const goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec'
+const goog = '' // Here goes your app link
+const repo = '' // Here goes your repository link e.g. ezeholz.github.io/shurl/
 
 function validarCode(src) {
     src.value = src.value.replace(/([^\w\d]*[_\W])/gi, '')
@@ -36,7 +37,7 @@ function createShurl(e, form) {
             form.idsh.hidden = true
             form.subsh.hidden = true
             document.getElementsByTagName('br')[0].hidden = true
-            document.getElementsByTagName('label')[0].innerHTML = '<a href="https://ezeholz.github.io/shurl/'+res.id+'">ezeholz.github.io/shurl/'+res.id+'</a>'
+            document.getElementsByTagName('label')[0].innerHTML = '<a href="https://'+repo+res.id+'">'+repo+res.id+'</a>'
         } else 
             alert('Ingrese una url!')
     })
