@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Not Found</title>
         <script>
-        let handler = windows.location;
+        let handler = location.href;
         if(handler.split('shurl')[1].slice(1)!="") {
             const goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec'
             fetch(goog+'?use=searchshort&id='+handler.split('shurl')[1].slice(1)).then((res) => res.json()).then(function(res){
