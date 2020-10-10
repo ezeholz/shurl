@@ -31,7 +31,14 @@ function createShurl(e, form) {
     }
 
     fetch(goog,data).then((res) => res.json()).then(function(res){
-        console.log(res.id)
+        if(res.id) {
+            form.urlsh.hidden = true
+            form.idsh.hidden = true
+            form.subsh.hidden = true
+            document.getElementsByTagName('br')[0].hidden = true
+            document.getElementsByTagName('label')[0].innerHTML = '<a href="https://ezeholz.github.io/shurl/'+res.id+'">ezeholz.github.io/shurl/'+res.id+'</a>'
+        } else 
+            alert('Ingrese una url!')
     })
 }
 
