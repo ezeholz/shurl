@@ -1,3 +1,5 @@
+const goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec'
+
 function validarCode(src) {
     src.value = src.value.replace(/([^\w\d]*[_\W])/gi, '')
 }
@@ -14,8 +16,6 @@ function createid(length,result='') {
 
 function createShurl(e, form) {
     e.preventDefault();
-    
-    var goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec'
 
     let id = form.idsh.value || form.idsh.placeholder
 
@@ -41,5 +41,3 @@ function createShurl(e, form) {
             alert('Ingrese una url!')
     })
 }
-
-document.getElementById('idsh').placeholder = createid(6)
