@@ -9,7 +9,8 @@
         if(handler.split('shurl')[1].slice(1)!="") {
             const goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec'
             fetch(goog+'?use=searchshort&id='+handler.split('shurl')[1].slice(1)).then((res) => res.json()).then(function(res){
-                location.href = res.url
+                if(res.url) location.href = res.url;
+                else location.href = 'https://ezeholz.github.io/shurl'
             })
         } else location.href = 'https://ezeholz.github.io/shurl'
     </script>
