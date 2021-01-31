@@ -1,5 +1,6 @@
 const goog = '' // Here goes your app link
 const repo = '' // Here goes your repository link e.g. ezeholz.github.io/shurl/
+if (repo.slice(-1) != "/") repo = repo + "/"
 
 function validarCode(src) {
     src.value = src.value.replace(/([^\w\d]*[_\W])/gi, '')
