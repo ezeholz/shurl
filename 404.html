@@ -7,7 +7,7 @@
         <script src="./scripts/index.js"></script>
         <script>
             let handler = location.href.split(repo)[1].replace("/","");
-            if(handler!="") {
+            if(handler!="" && handler != "false") {
                 fetch(goog+'?use=searchshort&id='+handler).then((res) => res.json()).then(function(res){
                     if(res.url) location.href = res.url;
                     else location.href = 'https://'+repo
