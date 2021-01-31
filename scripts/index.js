@@ -1,5 +1,6 @@
 const goog = 'https://script.google.com/macros/s/AKfycbyz-a8pyXp5r9vSIWyd9ISLM98nB9E1WE6kRbuoVik-rRi1z7MY/exec' // Here goes your app link
 const repo = 'shurl.ezeholz.com.ar/' // Here goes your repository link e.g. ezeholz.github.io/shurl/
+if (repo.slice(-1) != "/") repo = repo + "/"
 
 function validarCode(src) {
     src.value = src.value.replace(/([^\w\d]*[_\W])/gi, '')
